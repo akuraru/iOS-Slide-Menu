@@ -93,13 +93,6 @@ static SlideNavigationController *singletonInstance;
 	singletonInstance = self;
 	self.delegate = self;
 	
-	self.view.layer.shadowColor = [UIColor darkGrayColor].CGColor;
-	self.view.layer.shadowRadius = MENU_SHADOW_RADIUS;
-	self.view.layer.shadowOpacity = MENU_SHADOW_OPACITY;
-	self.view.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.view.bounds].CGPath;
-	self.view.layer.shouldRasterize = YES;
-	self.view.layer.rasterizationScale = [UIScreen mainScreen].scale;
-	
 	[self setEnableSwipeGesture:YES];
 }
 
