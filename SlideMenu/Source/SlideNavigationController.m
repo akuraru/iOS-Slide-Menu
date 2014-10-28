@@ -166,6 +166,7 @@ static SlideNavigationController *singletonInstance;
 
 - (void)switchToViewController:(UIViewController *)viewController withCompletion:(void (^)())completion
 {
+    	[self enableTapGestureToCloseMenu:NO];
 	if (self.avoidSwitchingToSameClassViewController && [self.topViewController isKindOfClass:viewController.class])
 	{
 		[self closeMenuWithCompletion:completion];
